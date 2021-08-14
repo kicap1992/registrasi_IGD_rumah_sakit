@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Halaman Utama - Admin Registrasi</title>
+
+	<!-- Main Styles -->
+	<link rel="stylesheet" href="../assets/styles/style.min.css">
+
+	<!-- mCustomScrollbar -->
+	<link rel="stylesheet" href="../assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.min.css">
+
+	<!-- Waves Effect -->
+	<link rel="stylesheet" href="../assets/plugin/waves/waves.min.css">
+
+	<!-- Dark Themes -->
+	<link rel="stylesheet" href="../assets/styles/style-dark.min.css">
+
+	<link rel="stylesheet" href="../assets/sweet-alert/sweetalert.css">
+  <style type="text/css">
+    .swal-modal .swal-text {
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+<div class="main-menu">
+	<header class="header">
+		<a href="../index.html" class="logo">NinjaTeam</a>
+		<button type="button" class="button-close fa fa-times js__menu_close"></button>
+		<div class="user">
+			<a href="../#" class="avatar"><img src="../http://placehold.it/80x80" alt=""><span class="status online"></span></a>
+			<h5 class="name"><a href="../profile.html">Emily Stanley</a></h5>
+			<h5 class="position">Administrator</h5>
+			
+		</div>
+		<!-- /.user -->
+	</header>
+	<!-- /.header -->
+	<div class="content">
+
+		<div class="navigation">
+			<h5 class="title">Navigation</h5>
+			<!-- /.title -->
+			<ul class="menu js__accordion">
+				<li class="current">
+					<a class="waves-effect" href="../index.html"><i class="menu-icon fa fa-home"></i><span>Dashboard</span></a>
+				</li>
+				
+			</ul>
+			
+		</div>
+		<!-- /.navigation -->
+	</div>
+	<!-- /.content -->
+</div>
+<!-- /.main-menu -->
+
+<div class="fixed-navbar">
+	<div class="pull-left">
+		<button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
+		<h1 class="page-title">Home</h1>
+		<!-- /.page-title -->
+	</div>
+	<!-- /.pull-left -->
+	<div class="pull-right">
+		<div class="ico-item">
+			
+		</div>
+		
+		<div class="ico-item toggle-hover js__drop_down ">
+			
+		</div>
+		
+	</div>
+	<!-- /.pull-right -->
+</div>
+<!-- /.fixed-navbar -->
+
+
+<div id="wrapper">
+	<div class="main-content">
+		<div class="row small-spacing">
+			<div class="col-xs-12">
+				<div class="box-content">
+					<h4 class="box-title" >Registrasi Pasien</h4>
+					<form id="sini_form" >
+						<div class="card-content">
+							<div class="row small-spacing">
+								
+								<div class="col-xs-6">
+									<div class="form-group">
+										<label >Nomor Urut Tahun</label>
+										<input type="text" class="form-control"  id="nomor_urut_tahun" name="nomor_urut_tahun" placeholder="Masukkan NIP Guru" maxlength="18" onkeypress="return isNumberKey(event)" >
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1">Nomor Urut Bulan</label>
+										<input type="text" class="form-control" id="nomor_urut_bulan" name="nomor_urut_bulan" placeholder="Masukkan Nama">
+									</div>
+									<div class="form-group">
+										<label for="exampleInputPassword1">Nomor Register</label>
+										<input type="text" class="form-control" id="nomor_register" name="nomor_register" placeholder="Masukkan Nomor Register Pasien" minlength="8" maxlength="8" required>
+									</div>
+		
+									<div class="form-group">
+										<label >Tanggal</label>
+										<input type="text" class="form-control" id="tanggal" name="tanggal" placeholder="Masukkan Jumlah Simpanan Pokok" maxlength="11">
+									</div>
+		
+									<div class="form-group">
+										<label >Nama</label>
+										<input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan Nama Pasien" maxlength="100" required>
+									</div>
+		
+									<div class="form-group">
+										<label >Jenis Kelamin</label>
+										<select class="form-control" id="jenis_kelamin" name="jenis_kelamin" required>
+											<option disabled="" selected="" value="">-Pilih Jenis Kelamin</option>
+											<option value="Laki-laki">Laki-laki</option>
+											<option value="Perempuan">Perempuan</option>
+										</select>
+									</div>
+									
+									<div class="form-group">
+										<label >Umur</label>
+										<input type="text" class="form-control" id="umur" name="umur" placeholder="Masukkan Umur Pasien" maxlength="2" onkeypress="return isNumberKey(event)" required>
+									</div>
+
+									<div class="form-group">
+										<label >Agama</label>
+										<select class="form-control" id="agama" name="agama" required>
+											<option disabled="" selected="" value="">-Pilih Agama</option>
+											<option value="Islam">Islam</option>
+											<option value="Kristen">Kristen</option>
+											<option value="Katolik">Katolik</option>
+											<option value="Hindu">Hindu</option>
+											<option value="Buddha">Buddha</option>
+											<option value="Konghucu">Konghucu</option>
+										</select>
+									</div>
+
+									<div class="form-group">
+										<label >Alamat</label>
+										<textarea name="alamat" id="alamat" class="form-control" placeholder="Masukkan Alamat" style="resize: none;"></textarea>
+									</div>
+
+								</div>
+								<!-- /.col-xs-3 -->
+								<div class="col-xs-6">
+									<div class="form-group">
+										<label >Diagnosa</label>
+										<textarea name="diagnosa" id="diagnosa" class="form-control" placeholder="Masukkan Diagnosa" style="resize: none;" required></textarea>
+									</div>
+
+									<div class="form-group">
+										<label >Jenis Kasus</label>
+										<select class="form-control" id="jenis_kasus" name="jenis_kasus" required>
+											<option disabled="" selected="" value="">-Pilih Jenis Kasus</option>
+											<option value="Interna">Interna</option>
+											<option value="Bedah">Bedah</option>
+											<option value="Anak">Anak</option>
+											<option value="OBGYN">OBGYN</option>
+											<option value="Mata">Mata</option>
+											<option value="KLL">KLL</option>
+										</select>
+									</div>
+
+									<div class="form-group">
+										<label >L/B</label>
+										<select class="form-control" id="lb" name="lb" required>
+											<option disabled="" selected="" value="">-Pilih L / B</option>
+											<option value="L">L</option>
+											<option value="B">B</option>
+										</select>
+									</div>
+
+									<div class="form-group">
+										<input type="checkbox" id="umum" name="umum" value="1">
+										<label ><b>Umum</b> </label>
+									</div>
+
+									<div class="form-group">
+										<input type="checkbox" id="askes" name="askes" value="1">
+										<label ><b>ASKES</b> </label>
+									</div>
+
+									<div class="form-group">
+										<input type="checkbox" id="rujukan" name="rujukan" value="1">
+										<label ><b>Rujukan</b> </label>
+									</div>
+
+									<div class="form-group">
+										<input type="checkbox" id="dirujuk" name="dirujuk" value="1">
+										<label ><b>Dirujuk</b> </label>
+									</div>
+
+									<div class="form-group">
+										<label >Keterangan</label>
+										<textarea name="ket" id="ket" class="form-control" placeholder="Masukkan Keterangan" style="resize: none;" required></textarea>
+									</div>
+
+								</div>
+									
+							</div>
+							<!-- /.row -->
+
+							<div class="form-group" style="text-align: center;">
+								<button type="button" class="btn btn-primary waves-effect waves-light" onclick="daftar_pasien()">Registrasi Pasien</button>
+							</div>
+
+						</div>
+					</form>
+				</div>
+				<!-- /.box-content -->
+			</div>
+			
+		</div>
+		<!-- /.row -->		
+		<footer class="footer">
+			<ul class="list-inline">
+				<li>2021 © Rumah Sakit Fatima.</li>
+				
+			</ul>
+		</footer>
+	</div>
+	<!-- /.main-content -->
+</div><!--/#wrapper -->
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+		<script src="../assets/script/html5shiv.min.js"></script>
+		<script src="../assets/script/respond.min.js"></script>
+	<![endif]-->
+	<!-- 
+	================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="../assets/scripts/jquery.min.js"></script>
+	<script src="../assets/scripts/modernizr.min.js"></script>
+	<script src="../assets/plugin/bootstrap/js/bootstrap.min.js"></script>
+	<script src="../assets/plugin/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="../assets/plugin/nprogress/nprogress.js"></script>
+	<script src="../assets/plugin/sweet-alert/sweetalert.min.js"></script>
+	<script src="../assets/plugin/waves/waves.min.js"></script>
+	
+
+	<script src="../assets/scripts/main.min.js"></script>
+	<script src="../sweet-alert/url.js"></script>
+	<script src="../main.js"></script>
+	<script src="../sweet-alert/block/jquery.blockUI.js"></script> 
+	<script>
+		function daftar_pasien(){
+			console.log('sini daftar pasien');
+			let data = $("#sini_form").serializeArray();
+			data = objectifyForm(data)
+
+			// $.ajax({
+			// 	url: url+"api/registrasi/",
+			// 	type: 'post',
+			// 	data: {data : data },
+			// 	beforeSend: function(res) {
+															
+			// 		$.blockUI({ 
+			// 			message: "Sedang Diproses", 
+			// 			css: { 
+			// 			border: 'none', 
+			// 			padding: '15px', 
+			// 			backgroundColor: '#000', 
+			// 			'-webkit-border-radius': '10px', 
+			// 			'-moz-border-radius': '10px', 
+			// 			opacity: .5, 
+			// 			color: '#fff' 
+			// 		} });
+			// 	},
+			// 	success:  function  (response) {
+			// 		// $('#sini_form')[0].reset();
+			// 		$.unblockUI();
+			// 		console.log(response)
+			// 		swal({
+			// 			title : "Success",
+			// 			text:  "Registrasi Pasien Berhasil Ditambah, ",
+			// 			icon: "success",
+			// 			buttons: {
+			// 				cancel: false,
+			// 				confirm: true,
+			// 			},
+			// 		})
+					
+			// 	},
+			// 	error: function(XMLHttpRequest, textStatus, errorThrown) { 
+			// 		console.log(errorThrown)
+			// 		$.unblockUI();
+			// 		switch (XMLHttpRequest.status) {
+			// 			case 0:
+			// 				toastnya('Server Mati atau dalam Maintainance')
+			// 				break;
+			// 		}
+					
+			// 	} 
+			// });
+
+			
+
+			console.log(data)
+		}
+	</script>
+</body>
+</html>
